@@ -2,51 +2,56 @@
 layout: Stylesheet 
 --- 
 @import "fruity.css";
+@import "catppuccin.css";
 
 
 html,
 html[data-theme="light"] {
-    --color-bg-main: #FFFFFF;
-    --color-bg-sub: #FAFAFC;
-    --color-text-main: #282832;
-    --color-text-sub: #5D5D67;
-    --color-text-link: #2380ED;
+    --color-bg-main: var(--ctp-latte-base);
+    --color-bg-sub: var(--ctp-latte-mantle);
+    --color-text-main: var(--ctp-latte-text);
+    --color-text-sub: var(--ctp-latte-subtext1);
+    --color-text-link: var(--ctp-latte-flamingo);
     --color-border-dark: #363636;
     --color-border: #BABCBD;
     --color-border-light: #E5E5E5;
 }
 
 html[data-theme="dark"] {
-    --color-bg-main: #262626;
-    --color-bg-sub: #18181C;
-    --color-text-main: #FAFAFC;
-    --color-text-sub: #FFFEFF;
-    --color-text-link: #6D9EFF;
+    --color-bg-main: var(--ctp-mocha-base);
+    --color-bg-sub: var(--ctp-mocha-mantle);
+    --color-text-main: var(--ctp-mocha-text);
+    --color-text-sub: var(--ctp-mocha-subtext1);
+    --color-text-link: var(--ctp-mocha-flamingo);
     --color-border-dark: #E6E6E6;
     --color-border: #696969;
     --color-border-light: #353535;
+}
+
+theme-toggle-img[data-theme="light"] {
+    fill: var(--ctp-latte-yellow);
 }
 
 @media (prefers-color-scheme: dark) {
 
     html,
     html[data-theme="dark"] {
-        --color-bg-main: #262626;
-        --color-bg-sub: #18181C;
-        --color-text-main: #FAFAFC;
-        --color-text-sub: #FFFEFF;
-        --color-text-link: #6D9EFF;
+        --color-bg-main: var(--ctp-mocha-base);
+        --color-bg-sub: var(--ctp-mocha-mantle);
+        --color-text-main: var(--ctp-mocha-text);
+        --color-text-sub: var(--ctp-mocha-subtext1);
+        --color-text-link: var(--ctp-mocha-flamingo);
         --color-border-dark: #E6E6E6;
         --color-border: #696969;
         --color-border-light: #353535;
     }
 
     html[data-theme="light"] {
-        --color-bg-main: #FFFFFF;
-        --color-bg-sub: #FAFAFC;
-        --color-text-main: #282832;
-        --color-text-sub: #5D5D67;
-        --color-text-link: #2380ED;
+        --color-bg-main: var(--ctp-latte-base:);
+        --color-bg-sub: var(--ctp-latte-mantle);
+        --color-text-main: var(--ctp-latte-text);
+        --color-text-sub: var(--ctp-latte-subtext1);
+        --color-text-link: var(--ctp-latte-flamingo);
         --color-border-dark: #363636;
         --color-border: #BABCBD;
         --color-border-light: #E5E5E5;

@@ -6,7 +6,7 @@
 	],
 	"settings": {
 		"browser-preview.startUrl": "localhost:4000",
-		"editor.fontSize": 12,
-		"editor.fontFamily": "'Source Code Pro', 'Fira Code', Consolas, 'Courier New', monospace"
+		// "editor.fontSize": 12,
+		"editor.fontFamily": "CaskaydiaCove Nerd Font Mono,CaskaydiaCove Nerd Font, Cascadia Code Mono, Cascadia Code, sConsolas, 'Courier New', monospace"
 	}
 }
