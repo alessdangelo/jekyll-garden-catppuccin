@@ -21,3 +21,8 @@ $navbarBurgers.forEach( el => {
 });
 }
 });
+
+function expandToc() {
+    let toc = document.getElementById("toc");
+    toc.classList.toggle('toc-hidden');
+}

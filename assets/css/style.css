@@ -15,6 +15,7 @@ html[data-theme="light"] {
     --color-border-dark: #363636;
     --color-border: #BABCBD;
     --color-border-light: #E5E5E5;
+    --accent-color: var(--ctp-latte-flamingo);
 }
 
 html[data-theme="dark"] {
@@ -26,11 +27,12 @@ html[data-theme="dark"] {
     --color-border-dark: #E6E6E6;
     --color-border: #696969;
     --color-border-light: #353535;
+    --accent-color: var(--ctp-mocha-flamingo);
 }
 
-theme-toggle-img[data-theme="light"] {
+/* theme-toggle-img[data-theme="light"] {
     fill: var(--ctp-latte-yellow);
-}
+} */
 
 @media (prefers-color-scheme: dark) {
 
@@ -44,6 +46,7 @@ theme-toggle-img[data-theme="light"] {
         --color-border-dark: #E6E6E6;
         --color-border: #696969;
         --color-border-light: #353535;
+        --accent-color: var(--ctp-mocha-flamingo);
     }
 
     html[data-theme="light"] {
@@ -55,6 +58,7 @@ theme-toggle-img[data-theme="light"] {
         --color-border-dark: #363636;
         --color-border: #BABCBD;
         --color-border-light: #E5E5E5;
+        --accent-color: var(--ctp-latte-flamingo);
     }
 }
 
@@ -74,6 +78,11 @@ theme-toggle-img[data-theme="light"] {
     --padding-normal: 1.2rem;
     --padding-broad: 2rem;
     --padding-thin: 0.8rem;
+}
+
+::selection {
+    background-color: var(--accent-color);
+    color: var(--color-bg-main);
 }
 
 /* 02. Typography */
@@ -355,7 +364,56 @@ ul ul {
     color: var(--color-text-link);
 }
 
-/* 08. Figures, Images, Code, Blockquotes, Tables */
+/* 08. TOC, Figures, Images, Code, Blockquotes, Tables */
+
+/* This makes the content takes full width */
+/* .post-flex{
+    display: flex;
+    flex-direction: row;
+    width: 100% !important;
+} */
+
+/* Hides the TOC on click of the title  */
+.toc-hidden{
+    /* display: none; */
+    /* visibility: collapse; */
+    display: none;
+}
+
+.toc__title {
+    content: "Table Of Contents";
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: block !important;
+    margin-top: 1rem;
+    padding: 0;
+   }
+   
+   .toc__list {
+    line-height: 1.8rem;
+    padding: 1rem 1.5rem;
+    padding-top: 0;
+    font-weight: 600;
+    margin-bottom: 0;
+    padding-bottom: 0;
+   }
+   
+   .toc__sublist li {
+    padding-left: 1.25rem;
+   }
+   
+   .toc-h2:first-child {
+    margin-top: 1rem;
+   }  
+   
+   #toc a {
+    color: var(--color-text-link);
+    text-decoration: none;
+   }
+   
+   #toc a:hover {
+    color: var(--accent-color);
+   }
 
 img {
     max-width: 100%;
